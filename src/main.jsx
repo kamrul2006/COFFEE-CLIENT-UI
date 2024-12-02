@@ -21,7 +21,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        loader: () => fetch('http://localhost:5000/coffees'),
+        loader: () => fetch('https://coffi-back.vercel.app/coffees'),
         element: <HomePage></HomePage>
       },
       {
@@ -30,12 +30,12 @@ const router = createBrowserRouter([
       },
       {
         path: "/updateCoffee/:id",
-        loader: ({ params }) => fetch(`http://localhost:5000/coffees/${params.id}`),
+        loader: ({ params }) => fetch(`https://coffi-back.vercel.app/coffees/${params.id}`),
         element: <PrivetRout><UpdateCoffee></UpdateCoffee></PrivetRout>
       },
       {
         path: "/Users",
-        loader: () => fetch(`http://localhost:5000/users`),
+        loader: () => fetch(`https://coffi-back.vercel.app/users`),
         element: <PrivetRout><AllUsers></AllUsers></PrivetRout>
       },
     ]

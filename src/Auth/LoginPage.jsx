@@ -41,7 +41,7 @@ const LoginPage = () => {
                 // console.log(lastSignInTime)
                 const loginInfo = { Email, lastSignInTime }
 
-                fetch(`http://localhost:5000/users`, {
+                fetch(`https://coffi-back.vercel.app/users`, {
                     method: "PATCH",
                     headers: {
                         'content-type': 'application/json'
@@ -65,6 +65,7 @@ const LoginPage = () => {
             })
             .catch((error) => {
                 // console.log(error)
+                navigate(location.state ? location.state : '/')
                 if (error) { setError('Password or Email is invalid..!') }
             });
     }
@@ -94,7 +95,7 @@ const LoginPage = () => {
 
 
     return (
-        <div className="bg-center bg-cover" style={{ backgroundImage: `url(${bg})` }}>
+        <div className="bg-center bg-cover text-white" style={{ backgroundImage: `url(${bg})` }}>
             <Link to={"/"} className="w-fit">
                 <p className="text-3xl pl-10 pt-10 font-bold text-white flex items-center gap-3 w-fit">
                     <img src="https://img.icons8.com/fluency/48/long-arrow-left.png" className="w-7" />
@@ -104,7 +105,7 @@ const LoginPage = () => {
             <div className="min-h-screen flex items-center justify-center ">
 
                 <div className="p-8 rounded-lg  max-w-md w-full">
-                    <h2 className="text-3xl font-bold text-center text-indigo-700 mb-6">Welcome Back</h2>
+                    <h2 className="text-3xl font-bold text-center text-white mb-6">Welcome Back</h2>
 
                     <form onSubmit={HandleLogin} className="space-y-6">
                         {/* Email Field */}
@@ -164,7 +165,7 @@ const LoginPage = () => {
                     </button>
 
                     {/* Footer Text */}
-                    <p className="text-center text-gray-600 mt-6">
+                    <p className="text-center text-white mt-6">
                         Don’t have an account? <Link to='/signUp' className="text-indigo-500 font-semibold hover:underline">Sign Up</Link>
                     </p>
                 </div>

@@ -18,9 +18,9 @@ const NavBar = () => {
 
 
             <div className='flex items-center gap-4'>
-                <Link to={"/"}><button className="btn btn-accent btn-sm">Home</button></Link>
-                {user && <Link to={"/addCoffee"}><button className="btn btn-secondary btn-sm">Add coffee</button></Link>}
-                {user && <Link to={"/users"}><button className="btn btn-error btn-sm">All Users</button></Link>}
+                <Link to={"/"}><button className="bg-transparent ring-2 ring-white py-1 active: px-5 hover:font-semibold text-white rounded-full">Home</button></Link>
+                {user && <Link to={"/addCoffee"}><button className="bg-transparent ring-2 ring-white py-1 active: px-5 hover:font-semibold text-white rounded-full">Add coffee</button></Link>}
+                {user && <Link to={"/users"}><button className="bg-transparent ring-2 ring-white py-1 active: px-5 hover:font-semibold text-white rounded-full">All Users</button></Link>}
             </div>
 
 

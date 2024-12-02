@@ -63,7 +63,7 @@ const SignupPage = () => {
                 const newUser = { Email, Name, Photo, CreatedTIme: time }
 
                 //------------------------save new user to data base-----------------------
-                fetch('http://localhost:5000/users', {
+                fetch('https://coffi-back.vercel.app/users', {
                     method: "POST",
                     headers: {
                         'content-type': "application/json"
@@ -99,7 +99,7 @@ const SignupPage = () => {
 
 
         //------------------------save new user to data base-----------------------
-        fetch('http://localhost:5000/users', {
+        fetch('https://coffi-back.vercel.app/users', {
             method: "POST",
             headers: {
                 'content-type': "application/json"
